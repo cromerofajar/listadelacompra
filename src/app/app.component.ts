@@ -12,19 +12,23 @@ export class ListaComprasComponent implements OnInit {
   constructor() {
     const compra1 = {
       comprar: "pan",
-      leido: true,
+      descuento: "10%",
+      comprado: true,
     };
     const compra2 = {
       comprar: "queso",
-      leido: false,
+      descuento: "20%",
+      comprado: false,
     };
     const compra3 = {
       comprar: "carne",
-      leido: false,
+      descuento: "No",
+      comprado: false,
     };
     const compra4 = {
       comprar: "pescado",
-      leido: false,
+      descuento: "No",
+      comprado: false,
     };
     this.compras = [];
     this.compras.push(compra1);

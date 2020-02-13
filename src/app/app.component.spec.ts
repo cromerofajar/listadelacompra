@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { ListaComprasComponent } from './app.component';
 
-describe('AppComponent', () => {
+describe('ListaCompraComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [

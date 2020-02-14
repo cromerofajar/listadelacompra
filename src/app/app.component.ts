@@ -12,22 +12,22 @@ export class ListaComprasComponent implements OnInit {
   constructor() {
     const compra1 = {
       comprar: "pan",
-      descuento: "10%",
+      descripcion: "Pan blanco",
       comprado: true,
     };
     const compra2 = {
       comprar: "queso",
-      descuento: "20%",
+      descripcion: "Queso azul",
       comprado: false,
     };
     const compra3 = {
       comprar: "carne",
-      descuento: "No",
+      descripcion: "Ternera",
       comprado: false,
     };
     const compra4 = {
       comprar: "pescado",
-      descuento: "No",
+      descripcion: "Salmon",
       comprado: false,
     };
     this.compras = [];

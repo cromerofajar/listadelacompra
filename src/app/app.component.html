@@ -1,33 +1,28 @@
 <h1>Lista de la compra</h1>
-<table style="width: 100%; border: 1px solid black;">
-  <tr>
-    <th>Comprado</th>
-    <th>Producto</th>
-    <th>Descuento</th>
+<table class="lista" style="width: 100%; border: 1px solid black;">
+  <tr class="lista">
+    <th class="lista">Producto</th>
+    <th class="lista">Descripcion</th>
   </tr>
-  <tr *ngFor="let compra of compras; index as i;">
-    <td align="center">
-      <input type="radio" name="comprar-{{i}}" [(ngModel)]="compra.comprado" [value]=true> Si
-      <input type="radio" name="comprar-{{i}}" [(ngModel)]="compra.comprado" [value]=false> No
-    </td>
-    <td align="center">{{compra.comprar}}</td>
-    <td align="center">{{compra.descripcion}}</td>
+  <tr class="lista" *ngFor="let compra of compras; index as i;">
+
+    <td class="lista" align="center">{{compra.comprar}}</td>
+    <td class="lista" align="center">{{compra.descripcion}}</td>
   </tr>
 </table>
 <h2>Estado</h2>
-<table style="width: 100%; border: 1px solid black;">
-  <tr>
-    <th> Comprado </th>
-    <th> Por comprar </th>
+<table class="estado" style="width: 100%; border: 1px solid black;">
+  <tr class="estado">
+    <th class="estado"> Comprado </th>
+    <th class="estado"> Por comprar </th>
   </tr>
-  <tr *ngFor="let compra of compras; index as i">
-  <td *ngIf="compras[i].comprado" align="center">
-    {{compra.comprar}}
-
+  <tr class="estado" *ngFor="let compra of compras; index as i">
+  <td  *ngIf="compra.comprado" align="center">
+    <button class="estadoSi" (click)="cambio(compra)">{{compra.comprar}}</button>
   </td>
     <td></td>
-    <td *ngIf="!compras[i].comprado" align="center">
-      {{compra.comprar}}
+    <td  *ngIf="!compra.comprado" align="center">
+      <button class="estadoNo" (click)="cambio(compra)">{{compra.comprar}}</button>
     </td>
   </tr>
 </table>

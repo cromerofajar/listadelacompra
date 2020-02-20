@@ -1,4 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
+import set = Reflect.set;
 
 @Component({
   selector: 'app-root',
@@ -8,26 +9,25 @@ import { Component, OnInit  } from '@angular/core';
 export class ListaComprasComponent implements OnInit {
 
   compras: any[];
-
   constructor() {
     const compra1 = {
-      comprar: "pan",
-      descripcion: "Pan blanco",
+      comprar: 'pan',
+      descripcion: 'Pan blanco',
       comprado: true,
     };
     const compra2 = {
-      comprar: "queso",
-      descripcion: "Queso azul",
+      comprar: 'queso',
+      descripcion: 'Queso azul',
       comprado: false,
     };
     const compra3 = {
-      comprar: "carne",
-      descripcion: "Ternera",
+      comprar: 'carne',
+      descripcion: 'Ternera',
       comprado: false,
     };
     const compra4 = {
-      comprar: "pescado",
-      descripcion: "Salmon",
+      comprar: 'pescado',
+      descripcion: 'Salmon',
       comprado: false,
     };
     this.compras = [];
@@ -38,5 +38,9 @@ export class ListaComprasComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  cambio(lista) {
+         lista.comprado = !lista.comprado;
   }
 }

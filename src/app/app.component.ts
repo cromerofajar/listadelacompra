@@ -30,11 +30,17 @@ export class ListaComprasComponent implements OnInit {
       descripcion: 'Salmon',
       comprado: false,
     };
+    const compra5 = {
+      comprar: 'jamon',
+      descripcion: 'Pata negra',
+      comprado: false,
+    };
     this.compras = [];
     this.compras.push(compra1);
     this.compras.push(compra2);
     this.compras.push(compra3);
     this.compras.push(compra4);
+    this.compras.push(compra5);
   }
 
   ngOnInit() {

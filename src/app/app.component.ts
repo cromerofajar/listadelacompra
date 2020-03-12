@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { ServicioDeAutentService} from './servicio-de-autent.service';
 import set = Reflect.set;
+import {FireDBService} from './fire-db.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import set = Reflect.set;
 export class ListaComprasComponent implements OnInit {
 
   compras: any[];
-  constructor( public authComponent: ServicioDeAutentService) {
+  constructor( public authComponent: ServicioDeAutentService,
+               public dbAPP: FireDBService) {
     const compra1 = {
       comprar: 'pan',
       descripcion: 'Pan blanco',

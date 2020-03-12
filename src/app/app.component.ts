@@ -1,4 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
+import { ServicioDeAutentService} from './servicio-de-autent.service';
 import set = Reflect.set;
 
 @Component({
@@ -9,7 +10,7 @@ import set = Reflect.set;
 export class ListaComprasComponent implements OnInit {
 
   compras: any[];
-  constructor() {
+  constructor( public authComponent: ServicioDeAutentService) {
     const compra1 = {
       comprar: 'pan',
       descripcion: 'Pan blanco',
